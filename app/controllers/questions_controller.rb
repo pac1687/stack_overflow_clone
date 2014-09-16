@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answers = @question.answers.all
+    @answer = Answer.new
   end
 
   def new
@@ -17,7 +18,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     if @question.save
       flash[:notice] = "Your question has been asked."
-      redirect_to_question_path(@question)
+      redirect_to question_path(@question)
     else
       redirect_to :back, notice: "Error, please try again."
     end
@@ -44,7 +45,7 @@ class QuestionsController < ApplicationController
 
 private
   def question_params
-    params.require(:question).permit(:question, :content, :chosen_answer_id).merge(user_id: current_user_id)
+    params.require(:question).permit(:question, :content, :chosen_answer_id).merge(user_id: current_user.id)
   end
 
 end

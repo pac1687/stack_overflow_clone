@@ -1,8 +1,14 @@
 <h1>stackoverflow</h1>
-<h3>Top Questions</h3>
-<div class="container">
-  <p> <% @questions.each do |q| %>
-    <%= link_to "#{question.text}", question_path(question) %>
+
+<div class="title">
+  <h3>Top Questions</h3>
+</div>
+
+<div class="container" id="site-description">
+  <ul> <% @questions.each do |question| %>
+    <li><%= link_to "#{question.question}", question_path(question) %></li>
+    <p><%= "#{question.user.name} asked at #{question.created_at}"  %></p>
+    <!-- do present minus time elapsed -->
     <% end %>
-  </p>
+  </ul>
 </div>

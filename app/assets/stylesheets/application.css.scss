@@ -16,3 +16,68 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Oswald:300,700,400);
+
+h1 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  margin: 0px;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+
+body {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
+    background-image: -moz-linear-gradient( rgba(0,0,0,0.22), rgba(255,255,255,0) 80px );
+    background-repeat: repeat-x;
+    // color: #555;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    margin: 0;
+
+}
+
+#site-description {
+    background: #f1f1f1;
+    background-image: -webkit-linear-gradient( #f8f8f8, #eee);
+    background-image: -moz-linear-gradient( #f8f8f8, #eee);
+    border-radius: 3px;
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 6px 10px;
+
+}
+
+a:hover {
+  color: #36bcab;
+}
+a {
+  color: #666;
+}
+
+.navbar-brand a {
+  color: #666;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.title  {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #36bcab;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+

@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1><%= @question.question %><h1>
+</div>
+
+<div class="container">
+  <p><%= "#{@question.user.name}" %> asked:</p>
+  <p id="site-description"><%= @question.content %></p>
+  <p>on <%= "#{@question.created_at}" %></p>
+</div>
+
+<div class="page-header">
+  <h4>Answers</h4>
+</div>
+
+<% if @answers != [] %>
+  <div class="container" id="site-description">
+    <ul> <% @answers.each do |answer| %>
+      <li><%= answer.text %></li>
+      <p><%= "#{answer.user.name} answered at #{answer.created_at}" %></p>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="container">
+  <%= render('answer_form') %>
+</div>
+
