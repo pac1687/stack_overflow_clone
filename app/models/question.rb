@@ -1,5 +1,6 @@
 class Question < ActiveRecord::Base
-  validates :text, presence: true
+  validates :question, presence: true
+  validates :content, presence: true
   validates :user_id, presence: true
 
   has_many :answers

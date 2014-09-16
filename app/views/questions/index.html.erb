@@ -1,0 +1,8 @@
+<h1>stackoverflow</h1>
+<h3>Top Questions</h3>
+<div class="container">
+  <p> <% @questions.each do |q| %>
+    <%= link_to "#{question.text}", question_path(question) %>
+    <% end %>
+  </p>
+</div>
